@@ -1,7 +1,7 @@
 # Import liberiers
 from flask import Flask, render_template,jsonify
 from utils import custom_chatbot 
-from utils import capture_voice
+#from utils import capture_voice
 from flask import request
 import random
 import os
