@@ -16,7 +16,7 @@ def chatbot_response():
        #response = chatbot.get_response(message).text
        return jsonify({'response': response})
 
-
+'''
 @app.route('/chatbot_voice', methods=['POST'])
 def voice_talk():
             message = request.json['message']
@@ -26,7 +26,7 @@ def voice_talk():
                 return jsonify({'response': response})
             else:
                 return jsonify({'response': ''})
-           
+ '''          
 
 if __name__ == '__main__':
     app.run(debug=True)
