@@ -2,6 +2,7 @@ gunicorn
 flask
 openai
 python-dotenv
+PortAudio
 sounddevice 
 soundfile
 scipy
