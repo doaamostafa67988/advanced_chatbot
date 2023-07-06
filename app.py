@@ -12,7 +12,7 @@ app = Flask(__name__)
 @app.route('/chatbot_text', methods=['POST'])
 def chatbot_response():
        message = request.json['message']
-       response = str(custom_chatbot(user_prompt=message))
+       response = custom_chatbot(user_prompt=message)
        #response = chatbot.get_response(message).text
        return jsonify({'response': response})
 
