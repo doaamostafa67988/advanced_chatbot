@@ -2,9 +2,9 @@
 import openai
 import os
 from dotenv import load_dotenv
-import sounddevice as sd
-import soundfile as sf
-from scipy.io.wavfile import write
+#import sounddevice as sd
+#import soundfile as sf
+#from scipy.io.wavfile import write
 import time
 
 
@@ -28,7 +28,7 @@ all_messages.append({'role': 'system', 'content': system_prompt})
 ## Capture voice for 30 secound
 fs = 44100  # Sample rate
 seconds = 30  # Duration of recording
-def  capture_voice():
+'''def  capture_voice():
     myrecording = sd.rec(int(seconds * fs), samplerate=fs, channels=2)
     sd.wait()  # Wait until recording is finished
     write('audio/output.wav', fs, myrecording)
@@ -41,7 +41,7 @@ def  capture_voice():
     os.remove(os.path.abspath("audio/output.wav"))
     destination = os.path.abspath("audio/output.mp3")
     return destination
-
+'''
 ## ------------------------------ Call the API -------------------------------- ##
 def custom_chatbot(user_prompt:str=None,destination:str=None):
     
