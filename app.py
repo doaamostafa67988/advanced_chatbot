@@ -3,11 +3,12 @@ from flask import Flask, render_template,jsonify
 from utils import custom_chatbot 
 #from utils import capture_voice
 from flask import request
+from flask_cors import CORS
 import random
 import os
 
 app = Flask(__name__)
-
+CORS(app, resources={r"/": {"origins": ""}})
 
 @app.route('/chatbot_text', methods=['POST'])
 def chatbot_response():
